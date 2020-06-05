@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Style/style.css" />
+
+</head>
+<body>
+    
+    <div class="container body-content">
+        <header>
+            <p id="header_title">Vape Webshop</p>
+        </header>
+
+        <div id="navigation_bar">
+            <div id="navigation_buttons">
+                <button id="about" class="block">About Vape</button>
+                <button id="products_1" class="block">Products - E-cigarettes</button>
+                <button id="products_2" class="block">Products - Liquids</button>
+                <button id="contact" class="block">Contact</button>
+            </div>
+        </div>
+
+        @RenderBody()
+        @Html.Partial("DeviceView")
+        <hr />
+        <footer>
+            <p>This is the footer of the webshop app</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
